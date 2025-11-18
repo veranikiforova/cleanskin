@@ -1,0 +1,7 @@
+aiogram
+fastapi
+uvicorn
+python-dotenv
+requests
+aiohttp
+aiofiles
