@@ -271,7 +271,7 @@ async def question5(message: types.Message):
 question_8 = ReplyKeyboardMarkup(resize_keyboard=True)
 question_8.add("Сильно сохнет").add("Немного сушится").add("Не меняется").add("Щеки сухие, Т-зона(нос, лоб, подбородок) нормальная/жирная").add("В главное меню")
 
-@dp.message_handler(text="Нет")
+@dp.message_handler(text="Чёрных точек нет")
 @dp.message_handler(text="Немного")
 @dp.message_handler(text="Много")
 @dp.message_handler(text="Только на носу")
