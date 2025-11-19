@@ -470,7 +470,6 @@ async def oily_skin_recommendations(message: types.Message):
 #
 @dp.message_handler(text="Комбинированный")
 async def combination_skin_recommendations(message: types.Message):
-    await message.reply(reply_markup=question_11)
     await message.answer("Отлично! Вот мои рекомендации по ежедневному уходу за "
                          "комбинированной кожей. "
                          "\nГоворя о комбинированной коже, стоит отметить, что "
