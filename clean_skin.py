@@ -4,7 +4,7 @@ from aiogram.utils import executor
 from aiogram.types import ReplyKeyboardMarkup
 
 # связываем с BotFather
-API_TOKEN = "6866401987:AAGtlxlsf_787sCEs_jZkW6ghZqfaf9PKkI"
+API_TOKEN = "6866401987:AAEUnSNhmeBXQTM7qZhA5OOAzxNJ6Ycvm58"
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot=bot)
