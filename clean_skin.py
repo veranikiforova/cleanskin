@@ -373,7 +373,7 @@ async def question5(message: types.Message):
                             " про увлажнение. "
                             "\n "
                             "\n💦Крема должны быть средней жирности и плотности.")
-    await message.reply(reply_markup=question_11)
+    await message.answer(reply_markup=question_11)
 #
   elif max(oily_skin, combination_skin, normal_skin, dry_skin) == oily_skin:
     await message.reply("Отлично! У вас жирный тип кожи.👍"
@@ -386,7 +386,7 @@ async def question5(message: types.Message):
                          "\n "
                          "\n💦И не забываем про увлажнение, ведь отсутствие достаточного "
                          "количества влаги в эпидермисе только усилит выработку кожного сала.")
-    await message.reply(reply_markup=question_11)
+    await message.answer(reply_markup=question_11)
 #
   elif max(oily_skin, combination_skin, normal_skin, dry_skin) == dry_skin:
     await message.reply("Отлично! У вас сухой тип кожи.👍"
@@ -405,9 +405,9 @@ async def question5(message: types.Message):
                          "\n💦Зимой сухую кожу нужно дополнительно увлажнять - использовать "
                          "питательные кремы и сыворотки, "
                          "а летом - обязательно использовать солнцезащитный крем.")
-    await message.reply(reply_markup=question_11)
+    await message.answer(reply_markup=question_11)
 
-#😊😁😉🤔👍💧🔥🫧💦🧖‍♀️🧖‼️✅🚩
+#
   elif max(oily_skin, combination_skin, normal_skin, dry_skin) == combination_skin:
     await message.reply("У вас комбинированный тип кожи.👍"
                             "\nГоворя о комбинированной коже, стоит отметить, что "
@@ -426,7 +426,7 @@ async def question5(message: types.Message):
                          "\n "
                          "\n💦Увлажнение для комбинированной кожи не менее важно, чем для сухой. "
                          "Подойдут крема с ламинарией и легкими маслами. ")
-    await message.reply(reply_markup=question_11)
+    await message.answer(reply_markup=question_11)
 
 
 
@@ -453,13 +453,12 @@ async def oily_skin_recommendations(message: types.Message):
                          "\n "
                          "\n💦И не забываем про увлажнение, ведь отсутствие достаточного "
                          "количества влаги в эпидермисе только усилит выработку кожного сала.")
-    await message.reply(reply_markup=question_11)
+    await message.answer(reply_markup=question_11)
 
 
 #
 @dp.message_handler(text="Комбинированный")
 async def combination_skin_recommendations(message: types.Message):
-    await message.reply(reply_markup=question_11)
     await message.answer("У вас комбинированный тип кожи.👍"
                             "\nГоворя о комбинированной коже, стоит отметить, что "
                          "чаще всего проблемной является Т-зона, а остальные части лица "
@@ -477,7 +476,7 @@ async def combination_skin_recommendations(message: types.Message):
                          "\n "
                          "\n💦Увлажнение для комбинированной кожи не менее важно, чем для сухой. "
                          "Подойдут крема с ламинарией и легкими маслами. ")
-    await message.reply(reply_markup=question_11)
+    await message.answer(reply_markup=question_11)
 #
 @dp.message_handler(text="Нормальный")
 async def normal_skin_recommendations(message: types.Message):
@@ -492,7 +491,7 @@ async def normal_skin_recommendations(message: types.Message):
                             " про увлажнение. "
                             "\n "
                             "\n💦Крема должны быть средней жирности и плотности.")
-    await message.reply(reply_markup=question_11)
+    await message.answer(reply_markup=question_11)
 
 #
 @dp.message_handler(text="Сухой")
@@ -513,7 +512,8 @@ async def dry_skin_recommendations(message: types.Message):
                          "\n💦Зимой сухую кожу нужно дополнительно увлажнять - использовать "
                          "питательные кремы и сыворотки, "
                          "а летом - обязательно использовать солнцезащитный крем.")
-    await message.reply(reply_markup=question_11)
+    await message.answer(reply_markup=question_11)
 
 if __name__ == '__main__':
     executor.start_polling(dp, skip_updates=False)
+
